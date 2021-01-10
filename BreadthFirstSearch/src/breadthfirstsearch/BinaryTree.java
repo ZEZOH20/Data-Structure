@@ -55,39 +55,7 @@ public class BinaryTree {
            
            return 1+count(temp.left)+count(temp.right);
        }
-       
-  //************************************** Original Code 
-   Queue BFS(int data,Node root){
-       Queue<Node>q=new Queue<Node>();
-        Queue<Integer>explored=new Queue<Integer>();
-       
-       Node temp= root;
-       q.Enqueue(temp);
-       
-        while(!q.IsEmpty()){
-         temp=q.Dequeue();  
-         if(temp!=null){
-          int value =temp.data;
-           explored.Enqueue(value);
-           
-           if(value==data){
-               System.out.println("Value is found");
-               return explored;
-           }
-           
-           if(explored.searchValue(value)){
-               q.Enqueue(temp.left);
-               q.Enqueue(temp.right);
-           }
-           
-         }
-         continue; 
-           
-        }
-           return explored;
-      
-          }
-      //**************************************************       
+         
  
      void printInOrder(Node root){
          Node temp=root;
@@ -105,7 +73,7 @@ public class BinaryTree {
            }
           
     }
-      
+   // Main function 
     public static void main(String[] args) {
         BinaryTree t1=new BinaryTree(10);
 	 
