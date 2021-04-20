@@ -16,7 +16,7 @@ public class Main
 		q.Enqueue(3);
 		q.Enqueue(4);
 
-  
+             q.reverse();
 	     q.print();
 }
 
@@ -61,6 +61,21 @@ class Queue<T>{
          }
          
    }
+
+   
+   void reverse(){
+       
+       if(front==null)
+        return;
+        
+       T value=Dequeue();
+       
+       reverse();
+       
+       Enqueue(value);
+   
+   }
+  
   
    void print(){
        
